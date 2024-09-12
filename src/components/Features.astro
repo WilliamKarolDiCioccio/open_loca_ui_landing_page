@@ -1,0 +1,56 @@
+---
+import { Icon } from 'astro-icon/components'
+
+const features = [
+  {
+    title: 'Effortless Setup',
+    description:
+      'Get started quickly with a straightforward installation and configuration process for OpenLocalUI.',
+    icon: 'mdi:rocket'
+  },
+  {
+    title: 'User-Friendly Interface',
+    description:
+      'Enjoy seamless navigation and management of your language models with our intuitive, modern UI.',
+    icon: 'mdi:stars'
+  },
+  {
+    title: 'Exceptional Performance',
+    description:
+      'Benefit from speedy and dependable performance, optimized for your local environment.',
+    icon: 'mdi:speedometer'
+  },
+  {
+    title: 'Fully Customizable',
+    description:
+      'Adapt OpenLocalUI to meet your unique needs with a range of customizable settings and options.',
+    icon: 'mdi:palette'
+  }
+]
+---
+
+<section id='features' class='bg-stone-950 py-20'>
+  <div class='container mx-auto px-6'>
+    <h2 class='text-3xl font-bold text-white text-center mb-12'>Features</h2>
+    <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+      {
+        features.map((feature) => (
+          <div
+            class='bg-gradient-to-br from-gray-800 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition transform'
+            data-tilt
+            data-tilt-glare='true'
+            data-tilt-max-glare='0.5'
+            data-aos='fade-up'
+            data-aos-delay={features.indexOf(feature) * 150}
+          >
+            <Icon class='w-12 h-12 text-white mb-2' name={feature.icon} />
+            <h3 class='text-xl font-semibold mb-2 text-white'>
+              {feature.title}
+            </h3>
+            <p class='text-gray-300 text-justify'>{feature.description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

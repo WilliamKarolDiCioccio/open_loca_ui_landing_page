@@ -1,0 +1,77 @@
+---
+import { Icon } from 'astro-icon/components'
+
+const currentYear = new Date().getFullYear()
+---
+
+<footer class='bg-stone-900 text-gray-200 py-12'>
+  <!-- Footer Top Section -->
+  <div class='container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8'>
+    <!-- Branding -->
+    <div class='flex flex-col items-start space-y-4'>
+      <a href='/' class='text-2xl font-bold text-grey-400'>OpenLocalUI</a>
+      <p class='text-gray-400 text-sm'>
+        Your go-to solution for running large language models locally with an
+        intuitive UI.
+      </p>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class='flex flex-col space-y-4'>
+      <h4 class='text-lg font-semibold text-gray-300'>Quick Links</h4>
+      <a href='#features' class='hover:text-white'>Features</a>
+      <a href='#screenshots' class='hover:text-white'>Screenshots</a>
+      <a href='#cta' class='hover:text-white'>Get Started</a>
+    </div>
+
+    <!-- Contact Info -->
+    <div class='flex flex-col space-y-4'>
+      <h4 class='text-lg font-semibold text-gray-300'>Contact Information</h4>
+      <p class='text-gray-400'>
+        Email: <a href='mailto:openlocalui@gmail.com' class='hover:text-white'
+          >openlocalui@gmail.com</a
+        >
+      </p>
+      <!-- Social Media Icons (optional) -->
+      <div class='flex space-x-4 mt-2'>
+        <!-- Instagram -->
+        <a
+          href='https://www.instagram.com/Wilielmus'
+          aria-label='Instagram'
+          class='hover:text-white'
+        >
+          <Icon class='w-5 h-5' name='mdi:instagram' />
+        </a>
+        <!-- GitHub -->
+        <a
+          href='https://github.com/WilliamKarolDiCioccio/open_local_ui'
+          aria-label='GitHub'
+          class='hover:text-white'
+        >
+          <Icon class='w-5 h-5' name='mdi:github' />
+        </a>
+        <!-- Discord -->
+        <a
+          href='https://discord.gg/S82WPJbPpz'
+          aria-label='Discord'
+          class='hover:text-white'
+        >
+          <Icon class='w-5 h-5' name='mdi:discord' />
+        </a>
+        <!-- YouTube -->
+        <a
+          href='https://www.youtube.com/@Wilielmus'
+          aria-label='YouTube'
+          class='hover:text-white'
+        >
+          <Icon class='w-5 h-5' name='mdi:youtube' />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bottom Section -->
+  <div class='container mx-auto px-6 mt-8 text-center text-sm text-gray-500'>
+    &copy; {currentYear} Di Cioccio William Karol. MIT License.
+  </div>
+</footer>

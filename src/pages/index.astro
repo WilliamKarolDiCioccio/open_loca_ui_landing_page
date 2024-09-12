@@ -1,16 +1,23 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro'
+import Header from '../components/Header.svelte'
+import Hero from '../components/Hero.astro'
+import Features from '../components/Features.astro'
+import Screenshots from '../components/Screenshots.svelte'
+import CTA from '../components/CTA.astro'
+import Footer from '../components/Footer.astro'
+import DarkModeToggle from '../components/DarkModeToggle.svelte'
+import Roadmap from '../components/Roadmap.astro'
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+  <Header client:only='svelte' />
+  <main>
+    <Hero />
+    <Features />
+    <Screenshots client:only='svelte' />
+    <Roadmap />
+    <CTA />
+  </main>
+  <Footer />
+</BaseLayout>

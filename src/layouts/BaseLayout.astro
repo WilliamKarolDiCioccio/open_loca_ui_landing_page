@@ -1,0 +1,37 @@
+---
+import '../styles/global.css'
+---
+
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>OpenLocalUI - Your Local LLM Solution</title>
+    <meta
+      name='description'
+      content='OpenLocalUI is your go-to solution for running large language models locally with an intuitive UI.'
+    />
+    <link rel='icon' href='/favicon.ico' />
+
+    <!-- Animate On Scroll -->
+    <link href='https://unpkg.com/aos@2.3.1/dist/aos.css' rel='stylesheet' />
+  </head>
+  <body class='bg-white text-gray-900'>
+    <slot />
+
+    <!-- Animate On Scroll -->
+    <script
+      is:inline
+      src='https://unpkg.com/aos@next/dist/aos.js'
+      crossorigin='anonymous'></script>
+    <script is:inline>
+      AOS.init()
+    </script>
+
+    <!-- Vanilla Tilt -->
+    <script
+      src='https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js'
+    ></script>
+  </body>
+</html>
