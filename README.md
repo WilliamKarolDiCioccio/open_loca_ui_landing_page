@@ -1,5 +1,7 @@
 # OpenLocalUI Landing Page 🚀
 
+![Vercel Deploy](https://deploy-badge.vercel.app/vercel/open-loca-ui-landing-page?style=plastic)
+
 Welcome to the landing page repository for **OpenLocalUI**, a cutting-edge desktop application designed to bring the power of LLMs (Large Language Models) to your local machine with ease. This landing page is built using Astro and Svelte, showcasing the features and benefits of OpenLocalUI.
 
 ## 📦 Overview
