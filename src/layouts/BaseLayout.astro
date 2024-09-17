@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css'
+import SpeedInsights from '@vercel/speed-insights/astro'
 ---
 
 <!doctype html>
@@ -19,6 +20,9 @@ import '../styles/global.css'
   </head>
   <body class='bg-white text-gray-900'>
     <slot />
+
+    <!-- Vercel Speed Insights -->
+    <SpeedInsights />
 
     <!-- Animate On Scroll -->
     <script
