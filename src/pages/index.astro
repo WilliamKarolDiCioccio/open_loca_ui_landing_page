@@ -4,7 +4,7 @@ import Header from '../components/Header.svelte'
 import Hero from '../components/Hero.astro'
 import Features from '../components/Features.astro'
 import Screenshots from '../components/Screenshots.svelte'
-import CTA from '../components/CTA.astro'
+import CTA from '../components/CTA.svelte'
 import Footer from '../components/Footer.astro'
 import DarkModeToggle from '../components/DarkModeToggle.svelte'
 import Roadmap from '../components/Roadmap.astro'
@@ -17,7 +17,7 @@ import Roadmap from '../components/Roadmap.astro'
     <Features />
     <Screenshots client:only='svelte' />
     <Roadmap />
-    <CTA />
+    <CTA client:only='svelte' />
   </main>
   <Footer />
 </BaseLayout>

@@ -1,40 +1,40 @@
 <script>
-  import { Icon } from "svelte-materialdesign-icons";
-  import { Modals, closeModal, openModal, modals } from "svelte-modals";
-  import Modal from "./ImageModal.svelte";
+  import { Icon } from 'svelte-materialdesign-icons'
+  import { Modals, closeModal, openModal, modals } from 'svelte-modals'
+  import Modal from './ImageModal.svelte'
 
-  // Modal funcionality
+  // Image Modal funcionality
   function handleOpen(src, alt, caption) {
     openModal(Modal, {
       src: src,
       alt: alt,
       caption: caption,
       onOpenAnother: () => {
-        handleOpen();
-      },
-    });
+        handleOpen(src, alt, caption)
+      }
+    })
   }
 
   let screenshots = [
     {
-      src: "/images/chat_page_light_theme.png",
-      alt: "Chat Page",
+      src: '/images/chat_page_light_theme.png',
+      alt: 'Chat Page',
       caption:
-        "From the chat page, you can communicate with your favorite models. You can embed images, videos, and more.",
+        'From the chat page, you can communicate with your favorite models. You can embed images, videos, and more.'
     },
     {
-      src: "/images/models_page_light_theme.png",
-      alt: "Models Management Page",
+      src: '/images/models_page_light_theme.png',
+      alt: 'Models Management Page',
       caption:
-        "This picture shows the models management page. From here, you can pull, push, create, and delete models.",
+        'This picture shows the models management page. From here, you can pull, push, create, and delete models.'
     },
     {
-      src: "/images/model_settings_light_theme.png",
-      alt: "Settings Page",
+      src: '/images/model_settings_light_theme.png',
+      alt: 'Settings Page',
       caption:
-        "In the settings page, you can find all you need to tweak OpenLocalUI to your liking.",
-    },
-  ];
+        'In the settings page, you can find all you need to tweak OpenLocalUI to your liking.'
+    }
+  ]
 </script>
 
 <section id="screenshots" class="bg-stone-950 py-20">
@@ -54,7 +54,7 @@
           />
 
           <div
-            class="absolute inset-0 bg-black bg-opacity-25 flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:backdrop-blur-sm transition-all duration-300"
+            class="absolute bg-black bg-opacity-25 flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:backdrop-blur-sm transition-all duration-300"
           >
             <!-- Fullscreen Button -->
             <button
@@ -63,7 +63,11 @@
                 handleOpen(screenshot.src, screenshot.alt, screenshot.caption)}
             >
               <span>Fullscreen</span>
-              <Icon name="fullscreen" class="w-8 h-8" />
+              <div
+                class="ml-0 w-0 overflow-hidden transition-all duration-300 group-hover:ml-2 group-hover:w-5"
+              >
+                <Icon class="w-5 h-5" name="fullscreen" />
+              </div>
             </button>
           </div>
         </div>
