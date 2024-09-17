@@ -22,7 +22,7 @@
 {#if isOpen}
   <div
     role="dialog"
-    class="fixed p-16 flex justify-center items-center bg-black bg-opacity-50 z-50"
+    class="fixed inset-0 p-16 flex justify-center items-center bg-black bg-opacity-50 z-50"
   >
     <div
       class="bg-stone-900 text-white rounded-lg p-6 w-full max-w-6xl flex flex-col items-center"

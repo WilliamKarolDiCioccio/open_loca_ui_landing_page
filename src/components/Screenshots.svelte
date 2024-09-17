@@ -8,10 +8,7 @@
     openModal(Modal, {
       src: src,
       alt: alt,
-      caption: caption,
-      onOpenAnother: () => {
-        handleOpen(src, alt, caption)
-      }
+      caption: caption
     })
   }
 
@@ -54,7 +51,7 @@
           />
 
           <div
-            class="absolute bg-black bg-opacity-25 flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:backdrop-blur-sm transition-all duration-300"
+            class="absolute inset-0 bg-black bg-opacity-25 flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:backdrop-blur-sm transition-all duration-300"
           >
             <!-- Fullscreen Button -->
             <button
@@ -63,11 +60,7 @@
                 handleOpen(screenshot.src, screenshot.alt, screenshot.caption)}
             >
               <span>Fullscreen</span>
-              <div
-                class="ml-0 w-0 overflow-hidden transition-all duration-300 group-hover:ml-2 group-hover:w-5"
-              >
-                <Icon class="w-5 h-5" name="fullscreen" />
-              </div>
+              <Icon class="ml-2 w-5 h-5" name="fullscreen" />
             </button>
           </div>
         </div>

@@ -80,7 +80,7 @@
 {#if isOpen}
   <div
     role="dialog"
-    class="fixed p-16 flex justify-center items-center bg-black bg-opacity-60 z-50 transition-opacity duration-300"
+    class="fixed inset-0 p-16 flex justify-center items-center bg-black bg-opacity-60 z-50 transition-opacity duration-300"
   >
     <div
       class="bg-stone-800 text-white rounded-lg p-8 max-w-lg w-full shadow-xl transform transition-transform duration-300"
@@ -96,7 +96,7 @@
             class="w-full py-3 px-4 rounded-full transition duration-300 flex justify-between items-center
             {releases[os].available
               ? currentPlatform === os
-                ? 'bg-white text-black'
+                ? 'bg-white hover:bg-gray-200 text-black'
                 : 'bg-stone-700 hover:bg-stone-600'
               : 'bg-stone-400 cursor-not-allowed opacity-50'}"
             on:click={() => handleDownload(os)}
@@ -130,9 +130,3 @@
     </div>
   </div>
 {/if}
-
-<style>
-  div[role='dialog'] {
-    opacity: 1;
-  }
-</style>

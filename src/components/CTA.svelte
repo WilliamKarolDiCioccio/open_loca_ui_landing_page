@@ -5,11 +5,7 @@
   import Modal from './DownloadsModal.svelte'
 
   function handleOpen() {
-    openModal(Modal, {
-      onOpenAnother: () => {
-        handleOpen()
-      }
-    })
+    openModal(Modal, {})
   }
 </script>
 
