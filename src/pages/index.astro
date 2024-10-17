@@ -6,14 +6,15 @@ import Features from '../components/Features.astro'
 import Screenshots from '../components/Screenshots.svelte'
 import CTA from '../components/CTA.svelte'
 import Footer from '../components/Footer.astro'
-import DarkModeToggle from '../components/DarkModeToggle.svelte'
 import Roadmap from '../components/Roadmap.astro'
+import About from '../components/About.astro'
 ---
 
 <BaseLayout>
   <Header client:only='svelte' />
   <main>
     <Hero />
+    <About />
     <Features />
     <Screenshots client:only='svelte' />
     <Roadmap />
