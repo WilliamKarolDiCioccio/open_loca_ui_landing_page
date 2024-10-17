@@ -7,6 +7,10 @@
   export let caption
 
   let zoomLevel = 1
+  let isDragging = false
+  let startX, startY
+  let translateX = 0
+  let translateY = 0
 
   function zoomIn() {
     zoomLevel += 0.2
@@ -16,6 +20,23 @@
     if (zoomLevel > 0.5) {
       zoomLevel -= 0.2
     }
+  }
+
+  function startPan(event) {
+    isDragging = true
+    startX = event.clientX - translateX
+    startY = event.clientY - translateY
+  }
+
+  function pan(event) {
+    if (isDragging) {
+      translateX = event.clientX - startX
+      translateY = event.clientY - startY
+    }
+  }
+
+  function stopPan() {
+    isDragging = false
   }
 </script>
 
@@ -28,12 +49,20 @@
       class="bg-stone-900 text-white rounded-lg p-6 w-full max-w-6xl flex flex-col items-center"
     >
       <!-- Image container -->
-      <div class="overflow-hidden flex justify-center items-center">
+      <div
+        role="presentation"
+        class="overflow-hidden flex justify-center items-center"
+        on:mousedown={startPan}
+        on:mousemove={pan}
+        on:mouseup={stopPan}
+        on:mouseleave={stopPan}
+      >
         <img
           {src}
           {alt}
-          class="transform transition-transform duration-300"
-          style="transform: scale({zoomLevel});"
+          class="transform transition-transform duration-300 cursor-move"
+          style="transform: scale({zoomLevel}) translate({translateX}px, {translateY}px);"
+          draggable="false"
         />
       </div>
 
