@@ -1,19 +1,19 @@
 <script>
-  import { Icon } from "svelte-materialdesign-icons";
+  import { Icon } from 'svelte-materialdesign-icons'
 
-  let isMenuOpen = false;
+  let isMenuOpen = false
 
   const toggleMenu = () => {
-    isMenuOpen = !isMenuOpen;
-  };
+    isMenuOpen = !isMenuOpen
+  }
 
   // Scroll progress functionality
-  window.addEventListener("scroll", () => {
-    const scrollProgress = document.getElementById("scroll-progress");
-    const totalHeight = document.body.scrollHeight - window.innerHeight;
-    const progress = (window.scrollY / totalHeight) * 100;
-    scrollProgress.style.width = progress + "%";
-  });
+  window.addEventListener('scroll', () => {
+    const scrollProgress = document.getElementById('scroll-progress')
+    const totalHeight = document.body.scrollHeight - window.innerHeight
+    const progress = (window.scrollY / totalHeight) * 100
+    scrollProgress.style.width = progress + '%'
+  })
 </script>
 
 <header class="h-full w-full bg-stone-900 sticky top-0 z-50 shadow-2xl">
@@ -55,30 +55,32 @@
       <ul class="flex space-x-6">
         <li>
           <a
-            href="#roadmap"
-            class="text-underline-animation text-gray-300 hover:text-white"
-            >Roadmap</a
-          >
-        </li>
-        <li>
-          <a
-            href="#features"
-            class="text-underline-animation text-gray-300 hover:text-white"
-            >Features</a
-          >
-        </li>
-        <li>
-          <a
-            href="#screenshots"
-            class="text-underline-animation text-gray-300 hover:text-white"
-            >Screenshots</a
-          >
-        </li>
-        <li>
-          <a
             href="#cta"
-            class="text-underline-animation text-gray-300 hover:text-white"
-            >Get Started</a
+            class="bg-gradient-to-r from-purple-500 to-cyan-500 inline-block bg-clip-text text-transparent font-extrabold"
+          >
+            Get Started
+          </a>
+        </li>
+        <li>
+          <p
+            class="cursor-not-allowed bg-gradient-to-r from-purple-800 to-cyan-700 inline-block bg-clip-text text-transparent font-extrabold"
+          >
+            Docs
+          </p>
+        </li>
+        <li>
+          <div class="h-6 w-px bg-gray-300"></div>
+        </li>
+        <li>
+          <a href="#roadmap" class="text-gray-300 hover:text-white">Roadmap</a>
+        </li>
+        <li>
+          <a href="#features" class="text-gray-300 hover:text-white">Features</a
+          >
+        </li>
+        <li>
+          <a href="#screenshots" class="text-gray-300 hover:text-white"
+            >Screenshots</a
           >
         </li>
       </ul>
@@ -87,36 +89,42 @@
 
   <!-- Mobile Menu (opens towards the bottom) -->
   <nav
-    class={`lg:hidden bg-stone-900 transition-all absolute inset-x-0 ${isMenuOpen ? "block" : "hidden"}`}
+    class={`lg:hidden bg-stone-900 transition-all absolute inset-x-0 ${isMenuOpen ? 'block' : 'hidden'}`}
     style="top: 100%; left: 0; right: 0;"
   >
     <ul class="px-6 py-4 space-y-4 shadow-lg border-t border-stone-800">
       <li>
         <a
-          href="#roadmap"
-          class="text-underline-animation block text-gray-300 hover:text-white"
+          href="#cta"
+          class="bg-gradient-to-r from-purple-500 to-cyan-500 inline-block bg-clip-text text-transparent font-extrabold"
+        >
+          Get Started
+        </a>
+      </li>
+      <li>
+        <p
+          href="/"
+          class="cursor-not-allowed bg-gradient-to-r from-purple-800 to-cyan-700 inline-block bg-clip-text text-transparent font-extrabold"
+        >
+          Docs
+        </p>
+      </li>
+      <li>
+        <div class="h-px w-full bg-gray-300"></div>
+      </li>
+      <li>
+        <a href="#roadmap" class="block text-gray-300 hover:text-white"
           >Roadmap</a
         >
       </li>
       <li>
-        <a
-          href="#features"
-          class="text-underline-animation block text-gray-300 hover:text-white"
+        <a href="#features" class="block text-gray-300 hover:text-white"
           >Features</a
         >
       </li>
       <li>
-        <a
-          href="#screenshots"
-          class="text-underline-animation block text-gray-300 hover:text-white"
+        <a href="#screenshots" class="block text-gray-300 hover:text-white"
           >Screenshots</a
-        >
-      </li>
-      <li>
-        <a
-          href="#cta"
-          class="text-underline-animation block text-gray-300 hover:text-white"
-          >Get Started</a
         >
       </li>
     </ul>
