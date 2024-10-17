@@ -21,7 +21,7 @@
   <div class="h-1 w-full bg-gray-200">
     <div
       id="scroll-progress"
-      class="h-full bg-gradient-to-r from-purple-500 to-cyan-500 transition-all duration-100"
+      class="h-full bg-gradient-to-r from-yellow-300 via-orange-500 to-purple-500 transition-all duration-100"
       style="width: 0%;"
     ></div>
   </div>
@@ -56,14 +56,14 @@
         <li>
           <a
             href="#cta"
-            class="bg-gradient-to-r from-purple-500 to-cyan-500 inline-block bg-clip-text text-transparent font-extrabold"
+            class="bg-gradient-to-r from-yellow-300 to-purple-500 inline-block bg-clip-text text-transparent font-extrabold"
           >
             Get Started
           </a>
         </li>
         <li>
           <p
-            class="cursor-not-allowed bg-gradient-to-r from-purple-800 to-cyan-700 inline-block bg-clip-text text-transparent font-extrabold"
+            class="cursor-not-allowed bg-gradient-to-r from-yellow-500 to-purple-700 inline-block bg-clip-text text-transparent font-bold"
           >
             Docs
           </p>
@@ -96,7 +96,7 @@
       <li>
         <a
           href="#cta"
-          class="bg-gradient-to-r from-purple-500 to-cyan-500 inline-block bg-clip-text text-transparent font-extrabold"
+          class="bg-gradient-to-r from-yellow-300 to-purple-500 inline-block bg-clip-text text-transparent font-extrabold"
         >
           Get Started
         </a>
@@ -104,7 +104,7 @@
       <li>
         <p
           href="/"
-          class="cursor-not-allowed bg-gradient-to-r from-purple-800 to-cyan-700 inline-block bg-clip-text text-transparent font-extrabold"
+          class="cursor-not-allowed bg-gradient-to-r from-yellow-500 to-purple-700 inline-block bg-clip-text text-transparent font-bold"
         >
           Docs
         </p>

@@ -2,59 +2,66 @@
 import { Icon } from 'astro-icon/components'
 ---
 
-<section class='bg-gradient-to-b from-purple-500 to-stone-950 text-white py-16'>
-  <!-- Headline -->
-  <div class='container mx-auto px-4 flex flex-col lg:flex-row items-center'>
-    <div
-      class='lg:w-1/2 flex flex-col lg:flex-row items-center text-center lg:text-left mb-10 lg:mb-0'
-    >
-      <!-- Tagline and Button -->
-      <div class='container mx-auto px-6 md:text-left'>
-        <h1
-          class='text-3xl md:text-4xl font-bold mb-4'
-          data-aos='fade-up'
-          data-aos-delay='0'
-        >
-          Supercharge Your LLM experience with OpenLocalUI!
-        </h1>
-        <p
-          class='text-xl md:text-2xl mb-8'
-          data-aos='fade-up'
-          data-aos-delay='300'
-        >
-          Get started with OpenLocalUI today and unleash the power of large
-          language models on your machine.
-        </p>
-        <button
-          type='button'
-          class='bg-white text-purple-500 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition-all duration-300 p-2 group'
-          onclick="document.querySelector('#cta').scrollIntoView({ behavior: 'smooth' })"
-          data-aos='fade-up'
-          data-aos-delay='600'
-        >
-          <div class='flex flex-row items-center'>
-            Get Started
-            <div
-              class='ml-0 w-0 overflow-hidden transition-all duration-300 group-hover:ml-2 group-hover:w-5'
-            >
-              <Icon class='w-5 h-5' name='mdi:arrow-right' />
+<section
+  class='bg-cover bg-center text-white'
+  style='background-image: url(/images/mesh_gradient.webp)'
+>
+  <div
+    class='bg-gradient-to-b from-transparent via-transparent to-stone-950 text-white py-16'
+  >
+    <!-- Headline -->
+    <div class='container mx-auto px-4 flex flex-col lg:flex-row items-center'>
+      <div
+        class='lg:w-1/2 flex flex-col lg:flex-row items-center text-center lg:text-left mb-10 lg:mb-0'
+      >
+        <!-- Tagline and Button -->
+        <div class='container mx-auto px-6 md:text-left'>
+          <h1
+            class='text-3xl md:text-4xl font-bold mb-4'
+            data-aos='fade-up'
+            data-aos-delay='0'
+          >
+            Supercharge Your LLM experience with OpenLocalUI!
+          </h1>
+          <p
+            class='text-xl md:text-2xl mb-8'
+            data-aos='fade-up'
+            data-aos-delay='300'
+          >
+            Get started with OpenLocalUI today and unleash the power of large
+            language models on your machine.
+          </p>
+          <button
+            type='button'
+            class='bg-white text-purple-500 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition-all duration-300 p-2 group'
+            onclick="document.querySelector('#cta').scrollIntoView({ behavior: 'smooth' })"
+            data-aos='fade-up'
+            data-aos-delay='600'
+          >
+            <div class='flex flex-row items-center drop-shadow-lg'>
+              Get Started
+              <div
+                class='ml-0 w-0 overflow-hidden transition-all duration-300 group-hover:ml-2 group-hover:w-5'
+              >
+                <Icon class='w-5 h-5' name='mdi:arrow-right' />
+              </div>
             </div>
-          </div>
-        </button>
+          </button>
+        </div>
       </div>
-    </div>
 
-    <!-- Banner -->
-    <div
-      class='lg:w-1/2 flex justify-center lg:justify-end p-6'
-      data-aos='fade-left'
-      data-aos-delay='900'
-    >
-      <img
-        src='/images/composition.webp'
-        alt='App Screenshot'
-        class='max-w-full h-auto z-10 transition ease-in-out transform hover:scale-110'
-      />
+      <!-- Banner -->
+      <div
+        class='lg:w-1/2 flex justify-center lg:justify-end p-6 drop-shadow-2xl'
+        data-aos='fade-left'
+        data-aos-delay='900'
+      >
+        <img
+          src='/images/composition.webp'
+          alt='App Screenshot'
+          class='max-w-full h-auto z-10 transition ease-in-out transform hover:scale-110'
+        />
+      </div>
     </div>
   </div>
 </section>
