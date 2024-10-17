@@ -1,24 +1,70 @@
 ---
 import { Icon } from 'astro-icon/components'
+import { M } from '../../dist/_astro/Icon.-jUYKkDC'
 
 const steps = [
   {
+    title: 'Model Customization',
+    description:
+      '🛠️ OpenLocalUI provides users with a robust set of customization tools, including a system prompt editor and a comprehensive range of Ollama parameters. ✨ Create, save, and share custom model profiles to tailor language models to your needs.',
+    icon: 'mdi:settings',
+    status: 'done'
+  },
+  {
+    title: 'Multimedia Embedding',
+    description:
+      '🖼️ Embed images (for compatible models) and files directly within the text generation process. 📂 Upload media from your file system or drag and drop from any source to seamlessly integrate with the app.',
+    icon: 'mdi:document',
+    status: 'done'
+  },
+  {
+    title: 'Enhanced Search Integration',
+    description:
+      '🔍 Integrating with search engines and OS file systems to enrich model outputs with search results. 📄 Users can leverage their files to perform Retrieval-Augmented Generation (RAG), enhancing responses with real-time data.',
+    icon: 'mdi:search',
+    status: 'in-progress'
+  },
+  {
     title: 'Seamless Workflow Integration',
     description:
-      "We are developing an extensive suite of integrations designed to optimize OpenLocalUI's interaction with your operating system. Our objective is to enable users to construct custom data pipelines, facilitating streamlined access and management of their assets with minimal friction.",
-    icon: 'mdi:workflow'
+      "🔄 Building a suite of integrations to enhance OpenLocalUI's interaction with your operating system. 🧩 Construct custom data pipelines for efficient asset access and management with minimal friction.",
+    icon: 'mdi:workflow',
+    status: 'in-progress'
+  },
+  {
+    title: 'Voice Interaction (TTS & STT)',
+    description:
+      '🎙️ Integrating Text-to-Speech (TTS) and Speech-to-Text (STT) to enable voice interactions with language models. 🗣️ Users will be able to issue voice commands and receive audio responses, enhancing accessibility.',
+    icon: 'mdi:microphone',
+    status: 'in-progress'
+  },
+  {
+    title: 'Model Database & Management',
+    description:
+      '📚 Explore and install a diverse range of Ollama-compatible models from sources like the official Ollama Library, Hugging Face, GitHub, and more. 🔒 Upcoming authentication features will allow users to upload their own models to the database.',
+    icon: 'mdi:database',
+    status: 'done'
   },
   {
     title: 'Advanced Server Configuration',
     description:
-      'Future releases will include the capability to configure OpenLocalUI as a robust server environment. This will allow for the hosting and management of language models, providing remote accessibility and centralized control, enhancing the flexibility and scalability of model deployment.',
-    icon: 'mdi:server'
+      '🖥️ Future updates will include comprehensive server capabilities, allowing OpenLocalUI to host and manage language models. 🌐 This feature will enable remote access and centralized control, ensuring scalability and flexibility in deployment.',
+    icon: 'mdi:server',
+    status: 'planned'
   },
   {
-    title: 'Developing an Open Ecosystem',
+    title: 'Building an Open Ecosystem',
     description:
-      'The successful implementation of these features will lay the groundwork for establishing a comprehensive ecosystem centered around our public server API. This ecosystem will promote the development of open-source, privacy-centric applications leveraging self-hosted LLMs, fostering collaboration and innovation within the community.',
-    icon: 'mdi:earth'
+      '🌍 The integration of these features sets the stage for a collaborative ecosystem based on our public server API. 🤝 We aim to support open-source, privacy-focused applications that leverage self-hosted LLMs, driving innovation within the community.',
+    icon: 'mdi:earth',
+    status: 'planned'
+  },
+  {
+    title: 'LLM Lab',
+    description:
+      '🧪 Proposing the development of an LLM Lab feature, where users can benchmark different models, compare performance, and fine-tune parameters in a controlled environment. 🔍 This will offer greater flexibility and insights for model optimization.',
+    icon: 'mdi:flask',
+    status: 'proposal'
   }
 ]
 ---
@@ -26,26 +72,43 @@ const steps = [
 <section id='roadmap' class='bg-stone-950 py-20'>
   <div class='container mx-auto px-6'>
     <h2 class='text-3xl font-bold text-white text-center mb-12'>Roadmap</h2>
-    <ol class='items-center sm:flex gap-8'>
+    <div class='grid grid-cols-1 md:grid-cols-3 gap-8'>
       {
         steps.map((step) => (
-          <li
+          <div
             class='relative mb-6 sm:mb-0'
             data-aos='fade-up'
             data-aos-delay={steps.indexOf(step) * 150}
           >
             <div class='p-6 rounded-lg transition transform hover:scale-105'>
-              <div class='w-16 h-16 mb-6 rounded-full bg-gradient-to-br from-purple-700 to-cyan-700 flex items-center justify-center'>
-                <Icon class='w-10 h-10 text-white' name={step.icon} />
+              <div class='flex justify-between items-center'>
+                <div class='w-16 h-16 mb-6 rounded-full bg-gradient-to-br from-purple-700 to-cyan-700 flex items-center justify-center'>
+                  <Icon class='w-10 h-10 text-white' name={step.icon} />
+                </div>
+                <div class='flex justify-end items-center'>
+                  <Icon
+                    class='text-white w-6 h-6 mr-2'
+                    name={
+                      step.status === 'done'
+                        ? 'mdi:check-circle'
+                        : step.status === 'in-progress'
+                          ? 'mdi:circle-slice-8'
+                          : step.status === 'proposal'
+                            ? 'mdi:lightbulb-outline'
+                            : 'mdi:circle-outline'
+                    }
+                  />
+                  <span class='text-sm text-white'>{step.status}</span>
+                </div>
               </div>
               <h3 class='text-xl font-semibold mb-2 text-white'>
                 {steps.indexOf(step) + 1 + '. ' + step.title}
               </h3>
               <p class='text-gray-300 text-justify'>{step.description}</p>
             </div>
-          </li>
+          </div>
         ))
       }
-    </ol>
+    </div>
   </div>
 </section>
