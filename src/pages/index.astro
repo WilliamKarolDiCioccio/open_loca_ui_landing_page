@@ -4,21 +4,19 @@ import Header from '../components/Header.svelte'
 import Hero from '../components/Hero.astro'
 import Features from '../components/Features.astro'
 import Screenshots from '../components/Screenshots.svelte'
-import CTA from '../components/CTA.svelte'
 import Footer from '../components/Footer.astro'
 import Roadmap from '../components/Roadmap.astro'
-import About from '../components/About.astro'
+import About from '../components/About.svelte'
 ---
 
 <BaseLayout>
   <Header client:only='svelte' />
   <main>
     <Hero />
-    <About />
+    <About client:only='svelte' />
     <Features />
     <Screenshots client:only='svelte' />
     <Roadmap />
-    <CTA client:only='svelte' />
   </main>
   <Footer />
 </BaseLayout>

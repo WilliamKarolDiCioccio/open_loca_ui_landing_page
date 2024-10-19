@@ -34,7 +34,7 @@
   ]
 </script>
 
-<section id="screenshots" class="bg-stone-950 py-20">
+<section id="screenshots" class="py-20">
   <div class="container mx-auto px-6">
     <h2 class="text-3xl font-bold text-white text-center mb-12">Screenshots</h2>
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">

@@ -36,14 +36,11 @@ const features = [
       {
         features.map((feature) => (
           <div
-            class='bg-gradient-to-br from-gray-800 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition transform'
-            data-tilt
-            data-tilt-glare='true'
-            data-tilt-max-glare='0.5'
+            class='bg-gradient-to-br from-gray-800 via-stone-900 to-gray-700 bg-clip-padding backdrop-blur-md bg-opacity-30 border border-gray-100 border-opacity-30 p-6 rounded-2xl '
             data-aos='fade-up'
             data-aos-delay={features.indexOf(feature) * 150}
           >
-            <Icon class='w-12 h-12 text-white mb-2' name={feature.icon} />
+            <Icon class='w-12 h-12 text-white mb-4' name={feature.icon} />
             <h3 class='text-xl font-semibold mb-2 text-white'>
               {feature.title}
             </h3>

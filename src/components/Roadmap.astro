@@ -69,39 +69,56 @@ const steps = [
 ]
 ---
 
-<section id='roadmap' class='bg-stone-950 py-20'>
+<section id='roadmap' class='py-20 '>
   <div class='container mx-auto px-6'>
-    <h2 class='text-3xl font-bold text-white text-center mb-12'>Roadmap</h2>
-    <div class='grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-8'>
+    <h2 class='text-3xl md:text-4xl font-bold text-center mb-12' data-aos='fade-up'>
+      Roadmap
+    </h2>
+    <p class='text-center text-gray-300 mb-8' data-aos='fade-up' data-aos-delay='100'>
+      Follow our journey as we continue to build and improve OpenLocalUI. Here are the current milestones:
+    </p>
+    <div class='grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
       {
         steps.map((step) => (
-          <div data-aos='fade-up' data-aos-delay={steps.indexOf(step) * 150}>
-            <div class='p-6 rounded-lg transition transform hover:scale-105'>
-              <div class='flex justify-between items-center'>
-                <div class='w-16 h-16 mb-6 rounded-full bg-gradient-to-br from-yellow-500 to-purple-700 flex items-center justify-center'>
-                  <Icon class='w-10 h-10 text-white' name={step.icon} />
-                </div>
-                <div class='flex justify-end items-center'>
-                  <Icon
-                    class='text-white w-6 h-6 mr-2'
-                    name={
-                      step.status === 'done'
-                        ? 'mdi:check-circle'
-                        : step.status === 'in-progress'
-                          ? 'mdi:circle-slice-8'
-                          : step.status === 'proposal'
-                            ? 'mdi:lightbulb-outline'
-                            : 'mdi:circle-outline'
-                    }
-                  />
-                  <span class='text-sm text-white'>{step.status}</span>
-                </div>
+          <div
+            data-aos='fade-up'
+            data-aos-delay={steps.indexOf(step) * 150}
+            class='relative p-6 bg-gradient-to-br from-gray-800 via-stone-900 to-gray-700 bg-opacity-10 backdrop-blur-lg border border-gray-100 border-opacity-20 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105'
+          >
+            <!-- Step Number and Icon -->
+            <div class='flex justify-between items-center mb-4'>
+              <div class='w-16 h-16 rounded-full bg-gradient-to-br from-yellow-500 to-purple-700 flex items-center justify-center'>
+                <Icon class='w-8 h-8 text-white' name={step.icon} />
               </div>
-              <h3 class='text-xl font-semibold mb-2 text-white'>
-                {steps.indexOf(step) + 1 + '. ' + step.title}
-              </h3>
-              <p class='text-gray-300 text-justify'>{step.description}</p>
+              <!-- Status Icon & Label -->
+              <div class='flex items-center'>
+                <Icon
+                  class={
+                    `text-${step.status === 'done' ? 'green' : step.status === 'in-progress' ? 'yellow' : 'purple'}-400 w-6 h-6 mr-2`
+                  }
+                  name={
+                    step.status === 'done'
+                      ? 'mdi:check-circle'
+                      : step.status === 'in-progress'
+                        ? 'mdi:progress-clock'
+                        : step.status === 'proposal'
+                          ? 'mdi:lightbulb-outline'
+                          : 'mdi:circle-outline'
+                  }
+                />
+                <span class={`text-sm font-semibold text-${step.status === 'done' ? 'green' : step.status === 'in-progress' ? 'yellow' : 'purple'}-400`}>
+                  {step.status}
+                </span>
+              </div>
             </div>
+            
+            <!-- Step Title & Description -->
+            <h3 class='text-xl font-semibold mb-2 text-white'>
+              {steps.indexOf(step) + 1 + '. ' + step.title}
+            </h3>
+            <p class='text-gray-300 text-justify'>
+              {step.description}
+            </p>
           </div>
         ))
       }

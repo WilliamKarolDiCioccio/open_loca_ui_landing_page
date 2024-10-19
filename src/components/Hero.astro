@@ -3,65 +3,67 @@ import { Icon } from 'astro-icon/components'
 ---
 
 <section
-  class='bg-cover bg-center text-white'
+  class='bg-cover bg-center text-white relative overflow-hidden'
   style='background-image: url(/images/mesh_gradient.webp)'
 >
   <div
-    class='bg-gradient-to-b from-transparent via-transparent to-stone-950 text-white py-16'
+    class='bg-gradient-to-b from-transparent via-stone-900/40 to-stone-950 text-white py-24 lg:py-32'
   >
     <!-- Headline -->
-    <div class='container mx-auto px-4 flex flex-col lg:flex-row items-center'>
+    <div
+      class='container mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center'
+    >
+      <!-- Left Side: Tagline and Button -->
       <div
-        class='lg:w-1/2 flex flex-col lg:flex-row items-center text-center lg:text-left mb-10 lg:mb-0'
+        class='lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left mb-10 lg:mb-0'
+        data-aos='fade-right'
+        data-aos-delay='200'
       >
-        <!-- Tagline and Button -->
-        <div class='container mx-auto px-6 md:text-left'>
-          <h1
-            class='text-3xl md:text-4xl font-bold mb-4'
-            data-aos='fade-up'
-            data-aos-delay='0'
-            style='text-shadow: 16px 16px 16px rgba(0, 0, 0, 0.25);'
-          >
-            Supercharge Your LLM experience with OpenLocalUI!
-          </h1>
-          <p
-            class='text-xl md:text-2xl mb-8'
-            data-aos='fade-up'
-            data-aos-delay='300'
-            style='text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.25);'
-          >
-            Get started with OpenLocalUI today and unleash the power of large
-            language models on your machine.
-          </p>
-          <button
-            type='button'
-            class='bg-white text-purple-500 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition-all duration-300 p-2 group'
-            onclick="document.querySelector('#cta').scrollIntoView({ behavior: 'smooth' })"
-            data-aos='fade-up'
-            data-aos-delay='600'
-          >
-            <div class='flex flex-row items-center drop-shadow-lg'>
-              Get Started
-              <div
-                class='ml-0 w-0 overflow-hidden transition-all duration-300 group-hover:ml-2 group-hover:w-5'
-              >
-                <Icon class='w-5 h-5' name='mdi:arrow-right' />
-              </div>
+        <h1
+          class='text-2xl md:text-5xl font-orbitron font-extrabold uppercase leading-tight mb-4 text-center md:text-left tracking-widest'
+          style='text-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3); letter-spacing: 2px;'
+        >
+          <span>Supercharge</span> Your LLM Experience with
+          <span>OpenLocalUI!</span>
+        </h1>
+        <p
+          class='text-xl md:text-2xl mb-8 opacity-80'
+          style='text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);'
+        >
+          Get started with OpenLocalUI today and unleash the power of large
+          language models on your machine.
+        </p>
+        <button
+          type='button'
+          class='bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-200 transition-all duration-300 p-2 group shadow-md hover:shadow-lg'
+          onclick="document.querySelector('#about').scrollIntoView({ behavior: 'smooth' })"
+        >
+          <div class='flex flex-row items-center'>
+            Get Started
+            <div
+              class='ml-0 w-0 overflow-hidden transition-all duration-300 group-hover:ml-2 group-hover:w-5'
+            >
+              <Icon class='w-5 h-5' name='mdi:arrow-down' />
             </div>
-          </button>
-        </div>
+          </div>
+        </button>
       </div>
 
-      <!-- Banner -->
+      <!-- Right Side: Banner Image -->
       <div
-        class='lg:w-1/2 flex justify-center lg:justify-end p-6 drop-shadow-2xl'
+        class='lg:w-1/2 flex justify-center lg:justify-end relative ml-0 md:ml-12'
         data-aos='fade-left'
-        data-aos-delay='900'
+        data-aos-delay='600'
       >
+        <!-- Decorative Circles Background -->
+        <div
+          class='absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-stone-900/70 rounded-full blur-3xl opacity-50 -z-10'
+        >
+        </div>
         <img
           src='/images/composition.webp'
           alt='App Screenshot'
-          class='max-w-full h-auto z-10 transition ease-in-out transform hover:scale-110'
+          class='max-w-full h-auto z-10 transition transform hover:scale-105 hover:rotate-2 duration-500'
         />
       </div>
     </div>

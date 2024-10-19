@@ -4,7 +4,9 @@ import { Icon } from 'astro-icon/components'
 const currentYear = new Date().getFullYear()
 ---
 
-<footer class='bg-stone-900 text-gray-200 py-12'>
+<footer class='text-gray-200 py-20'>
+  <div class='h-px w-full bg-gray-100 bg-opacity-30 mt-16 mb-16'></div>
+
   <!-- Footer Top Section -->
   <div class='container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8'>
     <!-- Branding -->
@@ -68,6 +70,54 @@ const currentYear = new Date().getFullYear()
           <Icon class='w-5 h-5' name='mdi:youtube' />
         </a>
       </div>
+    </div>
+  </div>
+
+  <div class='h-px w-full bg-gray-100 bg-opacity-30 mt-16 mb-16'></div>
+
+  <!-- Technology Section -->
+  <div class='container mx-auto px-6 mt-8'>
+    <p class='text-gray-500 text-sm text-center mt-6 mb-6'>Page Built with:</p>
+    <div class='flex flex-row items-center justify-center space-x-6'>
+      <a
+        href='https://svelte.dev'
+        target='_blank'
+        rel='noopener noreferrer'
+        class='flex items-center space-x-2 hover:text-white'
+      >
+        <img
+          src='/icons/svelte.svg'
+          alt='Svelte Logo'
+          class='w-6 h-6 filter invert'
+        />
+        <span>Svelte</span>
+      </a>
+      <a
+        href='https://astro.build'
+        target='_blank'
+        rel='noopener noreferrer'
+        class='flex items-center space-x-2 hover:text-white'
+      >
+        <img
+          src='/icons/astro.svg'
+          alt='Astro Logo'
+          class='w-6 h-6 filter invert'
+        />
+        <span>Astro</span>
+      </a>
+      <a
+        href='https://vercel.com'
+        target='_blank'
+        rel='noopener noreferrer'
+        class='flex items-center space-x-2 hover:text-white'
+      >
+        <img
+          src='/icons/vercel.svg'
+          alt='Vercel Logo'
+          class='w-6 h-6 filter invert'
+        />
+        <span>Vercel</span>
+      </a>
     </div>
   </div>
 
