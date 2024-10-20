@@ -72,8 +72,9 @@
       <!-- Call to Action Button -->
       <div class="mt-12" data-aos="fade-up" data-aos-delay="900">
         <button
+          id="cta-button"
           type="button"
-          class="bg-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-purple-500 hover:shadow-[0_0_20px_6px_rgba(128,0,128,0.8)] transition-all duration-300 p-2 group"
+          class="text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 p-2 group"
           on:click={() => handleOpen()}
           data-aos="fade-up"
           data-aos-delay="600"
@@ -83,7 +84,7 @@
 
             <!-- Alpha Version Warning -->
             <div
-              class="ml-2 text-xs bg-red-600 text-white px-2 py-1 rounded-full"
+              class="ml-2 text-xs bg-stone-900 text-white px-2 py-1 rounded-full"
             >
               Alpha
             </div>
@@ -95,6 +96,21 @@
             </div>
           </div>
         </button>
+      </div>
+
+      <!-- Quote block -->
+      <div class="mt-12 mx-auto w-9/12" data-aos="fade-up" data-aos-delay="900">
+        <blockquote class="italic text-sm md:text-base text-gray-300">
+          “ Many people think that open source projects are sort of chaotic and
+          anarchistic. They think that developers randomly throw code at the
+          code base and see what sticks. But that’s not true. Open source
+          projects are highly collaborative and disciplined, and they produce
+          some of the most robust and reliable software in the world. ”
+        </blockquote>
+        <footer class="mt-2 text-sm md:text-base text-gray-400">
+          Mitchell Baker (Chairwoman of the Mozilla Foundation and CEO of the
+          Mozilla Corporation)
+        </footer>
       </div>
     </div>
   </div>

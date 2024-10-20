@@ -1,6 +1,81 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Orbitron:wght@400..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+.nav-link {
+  position: relative;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s;
+}
+
+.nav-link:hover {
+  color: #d1d5db;
+}
+
+.nav-link::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: #ffffff;
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  opacity: 0;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+
+.nav-link:hover::after {
+  opacity: 1;
+}
+
+.emphasized-nav-link {
+  position: relative;
+  background-clip: text;
+  color: transparent;
+  font-weight: bolder;
+  font-size: 1rem;
+  background-size: 400% 400%;
+  background-image: linear-gradient(45deg, #fde047, #ea580c, #9333ea, #00d4ff);
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s;
+}
+
+.emphasized-nav-link:hover {
+  background-size: 400% 400%;
+  background-image: linear-gradient(45deg, #fde047, #ea580c, #9333ea, #00d4ff);
+  color: transparent;
+  animation: cycle 5s ease infinite;
+}
+
+.emphasized-nav-link::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-size: 400% 400%;
+  background-image: linear-gradient(45deg, #fde047, #ea580c, #9333ea, #00d4ff);
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  opacity: 0;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+
+.emphasized-nav-link:hover::after {
+  opacity: 1;
+  animation: cycle 5s ease infinite;
+}
+
+.typewriter-text {
+  text-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3);
+  letter-spacing: 2px;
+}
+
 .shining-border-card {
   position: relative;
 }
@@ -38,6 +113,28 @@
   }
   to {
     --angle: 360deg;
+  }
+}
+#cta-button {
+  background-size: 400% 400%;
+  background-image: linear-gradient(45deg, #fde047, #ea580c, #9333ea, #00d4ff);
+}
+
+#cta-button:hover {
+  background-size: 400% 400%;
+  animation: cycle 5s ease infinite;
+  box-shadow: 0 0 10px 0 #ea580c;
+}
+
+@keyframes cycle {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 

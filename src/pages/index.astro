@@ -12,7 +12,7 @@ import About from '../components/About.svelte'
 <BaseLayout>
   <Header client:only='svelte' />
   <main>
-    <Hero />
+    <Hero client:load />
     <About client:only='svelte' />
     <Features />
     <Screenshots client:only='svelte' />

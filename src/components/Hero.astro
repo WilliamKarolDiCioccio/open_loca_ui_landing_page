@@ -2,6 +2,28 @@
 import { Icon } from 'astro-icon/components'
 ---
 
+<script>
+  const typewriterText = 'Supercharge Your LLM Experience!'
+
+  // Typewriter Effect Function
+  const applyTypewriterEffect = () => {
+    const headlineElement = document.querySelector('.typewriter-text')
+    let result = ''
+    let typingSpeed = 40
+
+    if (headlineElement) {
+      for (let i = 0; i < typewriterText.length; i++) {
+        setTimeout(() => {
+          result += typewriterText[i]
+          headlineElement.innerHTML = result
+        }, typingSpeed * i)
+      }
+    }
+  }
+
+  window.addEventListener('load', applyTypewriterEffect)
+</script>
+
 <section
   class='bg-cover bg-center text-white relative overflow-hidden'
   style='background-image: url(/images/mesh_gradient.webp)'
@@ -20,11 +42,9 @@ import { Icon } from 'astro-icon/components'
         data-aos-delay='200'
       >
         <h1
-          class='text-2xl md:text-5xl font-orbitron font-extrabold uppercase leading-tight mb-4 text-center md:text-left tracking-widest'
+          class='typewriter-text text-2xl md:text-5xl font-orbitron font-extrabold uppercase leading-tight mb-4 text-center md:text-left tracking-widest'
           style='text-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3); letter-spacing: 2px;'
         >
-          <span>Supercharge</span> Your LLM Experience with
-          <span>OpenLocalUI!</span>
         </h1>
         <p
           class='text-xl md:text-2xl mb-8 opacity-80'
@@ -35,7 +55,7 @@ import { Icon } from 'astro-icon/components'
         </p>
         <button
           type='button'
-          class='bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-200 transition-all duration-300 p-2 group shadow-md hover:shadow-[0_0_20px_6px_rgba(255,255,255,0.8)]'
+          class='bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-200 transition-all duration-300 p-2 group shadow-md hover:shadow-[0_0_10px_0_#ffffff]'
           onclick="document.querySelector('#about').scrollIntoView({ behavior: 'smooth' })"
         >
           <div class='flex flex-row items-center'>
@@ -52,14 +72,10 @@ import { Icon } from 'astro-icon/components'
       <!-- Right Side: Banner Image -->
       <div
         class='lg:w-1/2 flex justify-center lg:justify-end relative ml-0 md:ml-12'
+        data-tilt
         data-aos='fade-left'
         data-aos-delay='600'
       >
-        <!-- Decorative Circles Background -->
-        <div
-          class='absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-stone-900/70 rounded-full blur-3xl opacity-50 -z-10'
-        >
-        </div>
         <img
           src='/images/composition.webp'
           alt='App Screenshot'

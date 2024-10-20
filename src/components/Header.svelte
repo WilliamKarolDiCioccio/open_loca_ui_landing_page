@@ -47,55 +47,37 @@
       on:click={toggleMenu}
       aria-label="Toggle Menu"
     >
-      <Icon name="menu" class="w-8 h-8 transition transform hover:scale-110" />
+      <Icon
+        name={isMenuOpen ? 'close' : 'menu'}
+        class="w-8 h-8 transition transform hover:scale-110"
+      />
     </button>
 
-    <!-- Navigation links for Desktop -->
+    <!--Navigation links for Desktop -->
     <nav class="hidden lg:flex space-x-8 items-center">
       <ul class="flex space-x-6">
         <li>
-          <a
-            href="#about"
-            class="bg-gradient-to-r from-yellow-300 to-purple-500 inline-block bg-clip-text text-transparent font-extrabold hover:text-opacity-80 transition"
-          >
-            Get Started
-          </a>
+          <a href="#about" class="emphasized-nav-link">Get Started</a>
         </li>
         <li>
-          <p
-            class="cursor-not-allowed bg-gradient-to-r from-yellow-300 to-purple-500 inline-block bg-clip-text text-transparent font-extrabold opacity-70"
+          <a href="/" class="emphasized-nav-link cursor-not-allowed opacity-50"
+            >Docs</a
           >
-            Docs
-          </p>
         </li>
         <li>
           <div class="h-6 w-px bg-gray-300"></div>
         </li>
         <li>
-          <a
-            href="#about"
-            class="text-gray-300 hover:text-white font-extrabold transition"
-          >
-            About
-          </a>
+          <a href="#about" class="nav-link">About</a>
         </li>
         <li>
-          <a href="#roadmap" class="text-gray-300 hover:text-white transition">
-            Roadmap
-          </a>
+          <a href="#features" class="nav-link">Features</a>
         </li>
         <li>
-          <a href="#features" class="text-gray-300 hover:text-white transition">
-            Features
-          </a>
+          <a href="#screenshots" class="nav-link">Screenshots</a>
         </li>
         <li>
-          <a
-            href="#screenshots"
-            class="text-gray-300 hover:text-white transition"
-          >
-            Screenshots
-          </a>
+          <a href="#roadmap" class="nav-link">Roadmap</a>
         </li>
       </ul>
     </nav>
@@ -108,20 +90,12 @@
     >
       <ul class="px-6 py-4 space-y-4 shadow-lg border-t border-stone-800">
         <li>
-          <a
-            href="#about"
-            class="bg-gradient-to-r from-yellow-300 to-purple-500 inline-block bg-clip-text text-transparent font-extrabold"
-            on:click={toggleMenu}
-          >
+          <a href="#about" class="emphasized-nav-link" on:click={toggleMenu}>
             Get Started
           </a>
         </li>
         <li>
-          <p
-            class="cursor-not-allowed bg-gradient-to-r from-yellow-300 to-purple-500 inline-block bg-clip-text text-transparent font-extrabold opacity-70"
-          >
-            Docs
-          </p>
+          <p class="emphasized-nav-link cursor-not-allowed opacity-50">Docs</p>
         </li>
         <li>
           <div class="h-px w-full bg-gray-300"></div>
@@ -129,37 +103,26 @@
         <li>
           <a
             href="#about"
-            class="text-gray-300 hover:text-white font-extrabold"
+            class="nav-link font-extrabold"
             on:click={toggleMenu}
           >
             About
           </a>
         </li>
+
         <li>
-          <a
-            href="#roadmap"
-            class="text-gray-300 hover:text-white"
-            on:click={toggleMenu}
-          >
-            Roadmap
-          </a>
-        </li>
-        <li>
-          <a
-            href="#features"
-            class="text-gray-300 hover:text-white"
-            on:click={toggleMenu}
-          >
+          <a href="#features" class="nav-link" on:click={toggleMenu}>
             Features
           </a>
         </li>
         <li>
-          <a
-            href="#screenshots"
-            class="text-gray-300 hover:text-white"
-            on:click={toggleMenu}
-          >
+          <a href="#screenshots" class="nav-link" on:click={toggleMenu}>
             Screenshots
+          </a>
+        </li>
+        <li>
+          <a href="#roadmap" class="nav-link" on:click={toggleMenu}>
+            Roadmap
           </a>
         </li>
       </ul>
