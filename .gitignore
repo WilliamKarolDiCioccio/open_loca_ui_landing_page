@@ -23,8 +23,8 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
-# Netlify adapter
-.netlify/
+# Vercel adapter
+.vercel/
 
 # CSS map files
 *.css.map
