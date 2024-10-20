@@ -55,7 +55,7 @@
       <ul class="flex space-x-6">
         <li>
           <a
-            href="#cta"
+            href="#about"
             class="bg-gradient-to-r from-yellow-300 to-purple-500 inline-block bg-clip-text text-transparent font-extrabold hover:text-opacity-80 transition"
           >
             Get Started
@@ -109,7 +109,7 @@
       <ul class="px-6 py-4 space-y-4 shadow-lg border-t border-stone-800">
         <li>
           <a
-            href="#cta"
+            href="#about"
             class="bg-gradient-to-r from-yellow-300 to-purple-500 inline-block bg-clip-text text-transparent font-extrabold"
             on:click={toggleMenu}
           >
