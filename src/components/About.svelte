@@ -14,15 +14,13 @@
       title: 'Open Source & Free',
       description: `OpenLocalUI is an open-source project by William Karol Di Cioccio. 
                     Our goal is to make interacting with large language models (LLMs) locally accessible to everyone, 
-                    without any cost. 🆓`,
-      delay: 300
+                    without any cost. 🆓`
     },
     {
       icon: '🔒',
       title: 'Privacy & Security',
       description: `We prioritize your privacy and community needs, allowing users to harness powerful AI tools 
-                    without compromising their data. Our commitment is to high-quality, secure software. 💪`,
-      delay: 500
+                    without compromising their data. Our commitment is to high-quality, secure software. 💪`
     },
     {
       icon: '⭐️',
@@ -31,8 +29,7 @@
                     so don't hesitate to visit the 
                     <a href="https://github.com/WilliamKarolDiCioccio/open_local_ui" 
                     class="text-purple-500 underline hover:text-purple-300 transition">
-                    Official Repository</a>.`,
-      delay: 700
+                    Official Repository</a>.`
     }
   ]
 </script>
@@ -52,12 +49,12 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
         {#each cards as card}
           <div
-            class="p-0.5 rounded-lg shining-border-card"
+            class="p-0.5 rounded-lg relative overflow-hidden shining-card-border-animation"
             data-aos="fade-up"
-            data-aos-delay={card.delay}
+            data-aos-delay={cards.indexOf(card) * 150}
           >
             <div
-              class="p-6 w-full h-full rounded-lg bg-gradient-to-br from-gray-800 via-stone-900 to-gray-700 bg-opacity-10 backdrop-blur-md"
+              class="p-6 w-full h-full rounded-lg bg-gradient-to-br from-gray-800 via-stone-900 to-gray-700 border border-white border-opacity-25"
             >
               <div class="text-3xl mb-4">{card.icon}</div>
               <h3 class="text-xl font-semibold mb-2">{card.title}</h3>

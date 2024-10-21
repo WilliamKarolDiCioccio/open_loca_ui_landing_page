@@ -80,18 +80,14 @@
     letter-spacing: 2px;
 }
 
-.shining-border-card {
-    position: relative;
-}
-
 @property --angle {
     syntax: '<angle>';
     initial-value: 0deg;
     inherits: false;
 }
 
-.shining-border-card::after,
-.shining-border-card::before {
+.shining-card-border-animation::after,
+.shining-card-border-animation::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -107,7 +103,7 @@
     animation: 3s spin linear infinite;
 }
 
-.shining-border-card::before {
+.shining-card-border-animation::before {
     filter: blur(0.5rem);
     opacity: 0.5;
 }
@@ -145,4 +141,22 @@
     100% {
         background-position: 0% 50%;
     }
+}
+
+.shining-card-border-interaction::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: var(--x);
+    left: var(--y);
+    transform: translate(-50%, -50%);
+    background-image: radial-gradient(#ffffff, #374151, transparent, transparent);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s;
+}
+
+.shining-card-border-interaction:hover::before {
+    opacity: 1;
 }

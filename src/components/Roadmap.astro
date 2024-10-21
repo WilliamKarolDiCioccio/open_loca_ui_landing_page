@@ -1,6 +1,5 @@
 ---
 import { Icon } from 'astro-icon/components'
-import { M } from '../../dist/_astro/Icon.-jUYKkDC'
 
 const steps = [
   {
@@ -83,9 +82,11 @@ const steps = [
           <div
             data-aos='fade-up'
             data-aos-delay={steps.indexOf(step) * 150}
-            class='relative p-6 bg-gradient-to-br from-gray-800 via-stone-900 to-gray-700 bg-opacity-10 backdrop-blur-lg border border-gray-100 border-opacity-20 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105'
+            class='p-0.5 rounded-lg relative overflow-hidden shining-card-border-interaction'
           >
-            <!-- Step Number and Icon -->
+            <div
+              class="p-6 w-full h-full rounded-lg bg-gradient-to-br from-gray-800/65 via-stone-900/65 to-gray-700/65 backdrop-blur-lg border border-white border-opacity-25"
+            >
             <div class='flex justify-between items-center mb-4'>
               <div class='w-16 h-16 rounded-full bg-gradient-to-br from-yellow-300 via-orange-500 to-purple-500 flex items-center justify-center'>
                 <Icon class='w-8 h-8 text-white' name={step.icon} />
@@ -112,14 +113,13 @@ const steps = [
               </div>
             </div>
             
-            <!-- Step Title & Description -->
             <h3 class='text-xl font-semibold mb-2 text-white'>
               {steps.indexOf(step) + 1 + '. ' + step.title}
             </h3>
             <p class='text-gray-300 text-justify'>
               {step.description}
             </p>
-          </div>
+          </div></div>
         ))
       }
     </div>

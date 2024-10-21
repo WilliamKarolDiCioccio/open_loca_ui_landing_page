@@ -20,3 +20,18 @@ import About from '../components/About.svelte'
   </main>
   <Footer />
 </BaseLayout>
+
+<script is:inline>
+  document
+    .querySelectorAll('.shining-card-border-interaction')
+    .forEach((card) => {
+      card.onmousemove = (e) => {
+        const rect = card.getBoundingClientRect()
+        const x = e.clientX - rect.left
+        const y = e.clientY - rect.top
+        card.style.setProperty('--x', `${y}px`)
+        card.style.setProperty('--y', `${x}px`)
+        console.log(x, y)
+      }
+    })
+</script>
